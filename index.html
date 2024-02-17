@@ -26,8 +26,25 @@
         <li>3. BOOM!</li>
       </ul>
 
-      <button type="button" onclick="alert('You clicked me!')">Click Me!</button>
+
+      <button type="button" id="button">Click Me!</button>
     </main>
     <footer>Page created by Egbie, Elena, Emil, Emma, William</footer>
+
+    <script>
+       let clicked = true;
+
+       const button = document.getElementById("button")
+        button.addEventListener("click", (e) => {
+         if (clicked) {
+           button.textContent = "You have clicked me";
+         } else {
+           button.textContent = "click me";
+
+         }
+         clicked = !clicked;
+       })
+    </script>
+
   </body>
 </html>
