@@ -1,35 +1,48 @@
 <!DOCTYPE html>
 
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css">   
     <title>Hello FAC30</title>
-    <meta name="description" content="Hello FAC30">
+    <meta name="description" content="Hello FAC30" />
 
     <style type="text/css">
-        footer {
-            margin-top: 500px;
-            margin-bottom: 30px
-        }
+      footer {
+        margin-top: 500px;
+        margin-bottom: 30px;
+      }
     </style>
-</head>
+  </head>
 
-<body>
-    <h1> HELLO FAC30
-        This is  atest
-    </h1>
+  <body>
+    <h1>HELLO FAC30 This is a test</h1>
     <h2>AWS Fun today!</h2>
     <main>
-        <ul>
-            <li>1. github</li>
-            <li>2. AWS</li>
-            <li>3. BOOM!</li>
-        </ul>
+      <ul>
+        <li>1. github</li>
+        <li>2. AWS</li>
+        <li>3. BOOM!</li>
+      </ul>
+
+      <button type="button" id="button">Click Me!</button>
     </main>
-    <footer>Page created by Egbie, Elena, Emil, Emma, William </footer>
+    <footer>Page created by Egbie, Elena, Emil, Emma, William</footer>
 
-</body>
+    <script>
+       let clicked = true;
 
+       const button = document.getElementById("button")
+        button.addEventListener("click", (e) => {
+         if (clicked) {
+           button.textContent = "You have clicked me";
+         } else {
+           button.textContent = "click me";
+
+         }
+         clicked = !clicked;
+       })
+    </script>
+  </body>
 </html>
